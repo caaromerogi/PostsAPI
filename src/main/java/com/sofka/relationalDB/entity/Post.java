@@ -20,7 +20,7 @@ public class Post  {
     private String title;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
-    private final List<Comment> comments = new ArrayList<Comment>();
+    private List<Comment> comments = new ArrayList<Comment>();
 
     public Post addComment(Comment comment){
         this.comments.add(comment);
